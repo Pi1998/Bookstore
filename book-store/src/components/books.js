@@ -3,8 +3,8 @@ import AddBook from './addBook';
 
 const Books = () => (
   <main className="mainSection">
-    <AddBook />
     <BooksList />
+    <AddBook />
   </main>
 );
 
