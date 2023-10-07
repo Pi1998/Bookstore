@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
 import { addBook } from '../redux/books/booksSlice';
 import AddButton from './addBtn';
+import '../styles/addBook.css';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -24,28 +25,30 @@ const AddBook = () => {
   };
 
   return (
-    <div className="bookInput">
-      <h3 className="addBook">Add new book</h3>
-      <form className="bookForm" onSubmit={submitHandler}>
-        <input
-          type="text"
-          className="title"
-          name="title"
-          placeholder="Book title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <input
-          type="text"
-          className="author"
-          name="author"
-          placeholder="Author"
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
-        />
-        <AddButton onClick={submitHandler}>Add</AddButton>
-      </form>
-    </div>
+    <>
+      <div className="bookInput">
+        <h3 className="addBook">Add new book</h3>
+        <form className="bookForm" onSubmit={submitHandler}>
+          <input
+            type="text"
+            className="inputTitle"
+            name="title"
+            placeholder="Book title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <input
+            type="text"
+            className="inputAuthor"
+            name="author"
+            placeholder="Author"
+            value={author}
+            onChange={(e) => setAuthor(e.target.value)}
+          />
+          <AddButton onClick={submitHandler}>Add</AddButton>
+        </form>
+      </div>
+    </>
   );
 };
 

@@ -1,3 +1,5 @@
+import '../styles/categories.css';
+
 const Category = () => (
   <div className="ongoing">
     <p>

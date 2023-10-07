@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import '../styles/book.css';
 
 const RemoveButton = ({ onClick, children }) => (
   <button type="button" onClick={onClick} className="remove">
