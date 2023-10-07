@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 import RemoveButton from './removeBtn';
+import '../styles/book.css';
 
 const Book = ({ bookInfo }) => {
   const dispatch = useDispatch();
@@ -11,25 +12,33 @@ const Book = ({ bookInfo }) => {
   };
 
   return (
-    <div>
+    <div className="book">
       <div className="description">
         <p className="category">{bookInfo.category}</p>
         <h3 className="title">{bookInfo.title}</h3>
         <small className="author">{bookInfo.author}</small>
         <div className="btnContainer">
+          <button type="button" className="comment">Comment</button>
           <RemoveButton onClick={handleRemove}>Remove</RemoveButton>
           <button type="button" className="edit">Edit</button>
         </div>
       </div>
-      <div className="borderV" />
-      <div className="chapter">
-        <p>
-          <span>Current chapter</span>
-          <br />
-          {bookInfo.chapter}
-        </p>
-        <button type="button" className="update">Update Progress</button>
+      <div className="progress">
+        <div className="progressCircle" />
+        <div className="completion">
+          <p className="percent">65%</p>
+          <small className="percentText">completed</small>
+        </div>
+        <div className="chapter">
+          <p>
+            <span>Current chapter</span>
+            <br />
+            Chapter 3
+          </p>
+          <button type="button" className="update">Update Progress</button>
+        </div>
       </div>
+
     </div>
   );
 };
