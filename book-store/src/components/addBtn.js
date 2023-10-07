@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/addBook.css';
 
 const AddButton = ({ onClick, children }) => (
   <button type="submit" onClick={onClick} className="btnAdd">
