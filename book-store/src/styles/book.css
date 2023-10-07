@@ -163,9 +163,9 @@
 }
 
 @media (max-width: 768px) {
-    .progressCircle {
-      width: 40px;
-      height: 40px;
-      border-width: 3px;
-    }
+  .progressCircle {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
   }
+}
